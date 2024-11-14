@@ -2,11 +2,12 @@
 #define RECTANGLE_H
 
 class Rectangle {
-  int width;
-  int height;
+  public:
+    int width;
+    int height;
 
-  void draw();
-  int getArea();
+    void draw();
+    int getArea();
 };
 
 #endif
