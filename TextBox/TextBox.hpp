@@ -1,6 +1,5 @@
 //
 //  TextBox.hpp
-//  Rectangle
 //
 //  Created by Ceci Benitez on 11/15/24.
 //
@@ -15,6 +14,8 @@ using namespace std;
 
 class TextBox {
     public:
+        TextBox() = default;
+        explicit TextBox(const string& value);
         string getValue();
         void setValue(const string& value);
     
