@@ -29,3 +29,9 @@ Rectangle::Rectangle(int width, int height) {
   setWidth(width);
   setHeight(height);
 }
+
+Rectangle::Rectangle(int width, int height, const string& color) : Rectangle(width, height) {
+  cout << "Constructing a rectangle with color" << endl;
+
+  this -> color = color;
+}

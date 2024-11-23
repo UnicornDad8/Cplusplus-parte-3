@@ -4,9 +4,7 @@
 using namespace std;
 
 int main() {
-  Rectangle rectangle;
-
-  cout << rectangle.getWidth() << endl;
+  Rectangle rectangle{ 10, 20, "blue" };
 
   return 0;
 }
