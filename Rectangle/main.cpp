@@ -3,8 +3,13 @@
 
 using namespace std;
 
+void showRectangle(Rectangle& rectangle) {
+
+}
+
 int main() {
-  Rectangle rectangle{ 10, 20, "blue" };
+  Rectangle first{ 10, 20 };
+  showRectangle(first);
 
   return 0;
 }
