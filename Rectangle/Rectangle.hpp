@@ -11,6 +11,7 @@ class Rectangle {
     Rectangle(const Rectangle& source) = delete;
     Rectangle(int width, int height);
     Rectangle(int width, int height, const string& color);
+    ~Rectangle();
     void draw();
     int getArea();
     int getWidth();

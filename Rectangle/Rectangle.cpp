@@ -35,3 +35,7 @@ Rectangle::Rectangle(int width, int height, const string& color) : Rectangle(wid
 
   this -> color = color;
 }
+
+Rectangle::~Rectangle() {
+  cout << "Destructor called" << endl;
+}
