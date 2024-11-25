@@ -4,8 +4,8 @@
 using namespace std;
 
 int main() {
-  Rectangle first{ 10, 20 };
-  Rectangle second{ 10, 20 };
+  // Immutable
+  const Rectangle rectangle;
 
   cout << Rectangle::getObjectsCount() << endl;
 

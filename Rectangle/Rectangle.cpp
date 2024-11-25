@@ -3,16 +3,16 @@
 
 using namespace std;
 
-void Rectangle::draw() {
+void Rectangle::draw() const {
   cout << "Drawing a rectangle" << endl;
   cout << "Dimensions: " << width << ", " << height << endl;
 }
 
-int Rectangle::getArea() {
+int Rectangle::getArea() const {
   return width * height;
 }
 
-int Rectangle::getWidth() {
+int Rectangle::getWidth() const {
     return width;
 }
 
@@ -23,25 +23,40 @@ void Rectangle::setWidth(int width) {
     this -> width = width;
 }
 
+int Rectangle::getHeight() const {
+    return height;
+}
+
+void Rectangle::setHeight(int height) {
+    if(height < 0)
+        throw invalid_argument("height");
+    
+    this -> height = height;
+}
+
+Rectangle::Rectangle() {
+    objectsCount++;
+}
+
 Rectangle::Rectangle(int width, int height) {
-  cout << "Constructing a rectangle" << endl;
-  
-  setWidth(width);
-  setHeight(height);
+    objectsCount++;
+    cout << "Constructing a rectangle" << endl;
+    setWidth(width);
+    setHeight(height);
 }
 
 Rectangle::Rectangle(int width, int height, const string& color) : Rectangle(width, height) {
-  cout << "Constructing a rectangle with color" << endl;
-
-  this -> color = color;
+    objectsCount++;
+    cout << "Constructing a rectangle with color" << endl;
+    this -> color = color;
 }
 
 Rectangle::~Rectangle() {
-  cout << "Destructor called" << endl;
+    cout << "Destructor called" << endl;
 }
 
 int Rectangle::objectsCount = 0;
 
 int Rectangle::getObjectsCount() {
-  return objectsCount;
+    return objectsCount;
 }
