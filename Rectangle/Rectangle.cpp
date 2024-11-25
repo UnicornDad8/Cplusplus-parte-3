@@ -39,3 +39,9 @@ Rectangle::Rectangle(int width, int height, const string& color) : Rectangle(wid
 Rectangle::~Rectangle() {
   cout << "Destructor called" << endl;
 }
+
+int Rectangle::objectsCount = 0;
+
+int Rectangle::getObjectsCount() {
+  return objectsCount;
+}

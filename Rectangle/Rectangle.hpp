@@ -19,10 +19,14 @@ class Rectangle {
     int getHeight();
     void setHeight(int height);
 
+    static int getObjectsCount();
+
   private:
     int width = 0;
     int height = 0;
     string color;
+
+    static int objectsCount;
 };
 
 #endif
