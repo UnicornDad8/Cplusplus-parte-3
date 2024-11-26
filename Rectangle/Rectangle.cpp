@@ -34,19 +34,14 @@ void Rectangle::setHeight(int height) {
     this -> height = height;
 }
 
-Rectangle::Rectangle() {
-    objectsCount++;
-}
-
 Rectangle::Rectangle(int width, int height) {
-    objectsCount++;
+    // objectsCount++;
     cout << "Constructing a rectangle" << endl;
     setWidth(width);
     setHeight(height);
 }
 
 Rectangle::Rectangle(int width, int height, const string& color) : Rectangle(width, height) {
-    objectsCount++;
     cout << "Constructing a rectangle with color" << endl;
     this -> color = color;
 }
